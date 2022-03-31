@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable-v24/buttonshape.xml" value="0.175" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.175" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/background_box.xml" value="0.152" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/blacks_dot.xml" value="0.175" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/filled_dot.xml" value="0.163" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.163" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/ic_baseline_list_24.xml" value="0.163" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.163" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/ic_baseline_post_add_24.xml" value="0.163" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/ic_meditation_bn7erjy46f.xml" value="0.175" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/ic_reshot_icon_work_in_progress_sign_boad_l7qmpv392f.xml" value="0.163" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/purple_dot.xml" value="0.175" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/red_straight_line.xml" value="0.163" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/slider_dots.xml" value="0.175" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/straight_line.xml" value="0.175" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/unfilled_dot.xml" value="0.176" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/white_dot.xml" value="0.175" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/drawable/yellow_straight_line.xml" value="0.163" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout-large/activity2_welcomepage.xml" value="0.1721311475409836" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/activity1_splashscreen.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/activity2_welcomepage.xml" value="0.264" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/activity3_enter_moblie_number.xml" value="0.25" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/activity3_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/activity4_enter_moblie_number.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/activity4_verify_otp_number.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/activity5_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/activity5_verify_otp_number.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/activity_enter_moblie_number.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/activity_screen_slide.xml" value="0.20199275362318841" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/activiy_screen_slide.xml" value="0.20199275362318841" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/fragment_add_data.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/fragment_list.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/fragment_user_detail.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/fragment_welcome_first.xml" value="0.25" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/fragment_welcome_second.xml" value="0.25" />
+        <entry key="..\:/Users/rajku/AndroidStudioProjects/VPM/app/src/main/res/layout/fragment_welcome_third.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
