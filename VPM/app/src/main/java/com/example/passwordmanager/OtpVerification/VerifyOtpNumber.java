@@ -13,7 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.passwordmanager.mainAcivity.MainActivity;
+import com.example.passwordmanager.MainActivity2;
 import com.example.passwordmanager.R;
 
 public class VerifyOtpNumber extends AppCompatActivity {
@@ -66,7 +66,7 @@ public class VerifyOtpNumber extends AppCompatActivity {
                         public void run() {
 
                             Toast.makeText(VerifyOtpNumber.this, "Verification Successfull", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(VerifyOtpNumber.this, MainActivity.class);
+                            Intent intent = new Intent(VerifyOtpNumber.this, MainActivity2.class);
                             startActivity(intent);
                             finish();
                         }

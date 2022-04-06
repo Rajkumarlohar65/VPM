@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.passwordmanager">
+    package="com.example.passwordmanager" >
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PasswordManager">
+        android:theme="@style/Theme.PasswordManager" >
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.PasswordManager.NoActionBar" />
         <activity
             android:name=".OtpVerification.VerifyOtpNumber"
             android:exported="false" />
@@ -16,14 +21,11 @@
             android:name=".OtpVerification.EnterMoblieNumber"
             android:exported="false" />
         <activity
-            android:name=".mainAcivity.MainActivity"
-            android:exported="false" />
-        <activity
             android:name=".welcome_Screen.WelcomePage"
             android:exported="false" />
         <activity
             android:name=".splashScreen.SplashScreen"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
