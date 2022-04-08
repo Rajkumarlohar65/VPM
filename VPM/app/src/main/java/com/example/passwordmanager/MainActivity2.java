@@ -3,8 +3,8 @@ package com.example.passwordmanager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -32,8 +32,11 @@ public class MainActivity2 extends AppCompatActivity {
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Toast.makeText(MainActivity2.this, "add item", Toast.LENGTH_SHORT).show();
+                mAppBarConfiguration = new AppBarConfiguration.Builder(
+                        R.id.nav_passwords, R.id.nav_notes, R.id.nav_addresses)
+                        .setOpenableLayout(binding.drawerLayout)
+                        .build();
             }
         });
         DrawerLayout drawer = binding.drawerLayout;

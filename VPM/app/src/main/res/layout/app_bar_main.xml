@@ -29,8 +29,9 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email"
-        tools:ignore="SpeakableTextPresentCheck" >
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:backgroundTint="@color/light_blue"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="@color/dark_blue"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
