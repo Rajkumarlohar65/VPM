@@ -39,18 +39,15 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity2.this, "add item", Toast.LENGTH_SHORT).show();
-                mAppBarConfiguration = new AppBarConfiguration.Builder(
-                        R.id.nav_passwords, R.id.nav_notes, R.id.nav_addresses)
-                        .setOpenableLayout(binding.drawerLayout)
-                        .build();
             }
         });
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_passwords, R.id.nav_notes, R.id.nav_addresses)
+                R.id.nav_passwords, R.id.nav_notes, R.id.nav_addresses, R.id.fab)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
