@@ -22,4 +22,10 @@
         android:name="com.example.passwordmanager.ui.addresses.AdressesFragment"
         android:label="@string/menu_addresses"
         tools:layout="@layout/fragment_adresses" />
+
+    <fragment
+        android:id="@+id/nav_allItem"
+        android:name="com.example.passwordmanager.ui.all_item.ItemAllFragment"
+        android:label="All Items"
+        tools:layout="@layout/fragment_item_all"/>
 </navigation>

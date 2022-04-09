@@ -10,7 +10,7 @@ public class PasswordViewModel extends ViewModel {
 
     public PasswordViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Passwords are here");
+        mText.setValue("Passwords");
     }
 
     public LiveData<String> getText() {

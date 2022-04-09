@@ -10,7 +10,7 @@ public class AdressesViewModel extends ViewModel {
 
     public AdressesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Addresses are here");
+        mText.setValue("Addresses");
     }
 
     public LiveData<String> getText() {

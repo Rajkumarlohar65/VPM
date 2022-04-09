@@ -10,10 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PasswordManager">
         <activity
+            android:name=".Add_Item"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2"
+            android:theme="@style/Theme.PasswordManager.NoActionBar"/>
+        <activity
             android:name=".SettingsActivity"
             android:exported="false"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity2"/>
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".MainActivity2"
             android:exported="false"
