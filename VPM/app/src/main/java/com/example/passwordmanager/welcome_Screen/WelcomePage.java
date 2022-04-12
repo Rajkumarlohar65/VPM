@@ -10,37 +10,34 @@ import android.widget.ProgressBar;
 
 import com.example.passwordmanager.OtpVerification.EnterMoblieNumber;
 import com.example.passwordmanager.R;
+import com.example.passwordmanager.databinding.Activity2WelcomepageBinding;
 
 public class WelcomePage extends AppCompatActivity {
-    Button btn2;
-    ProgressBar progressBar;
-    ViewPager2 viewPager;
+    private Activity2WelcomepageBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity2_welcomepage);
 
-        btn2 = findViewById(R.id.btn2);
-        progressBar = findViewById(R.id.progressBar);
-        viewPager = findViewById(R.id.viewPager);
+        binding = Activity2WelcomepageBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         welcomeFragmentAdapter adapter = new welcomeFragmentAdapter(getSupportFragmentManager(),getLifecycle());
-        viewPager.setAdapter(adapter);
+        binding.viewPager.setAdapter(adapter);
 
-        progressBar.setVisibility(View.INVISIBLE);
-        btn2.setOnClickListener(new View.OnClickListener() {
+        binding.progressBar.setVisibility(View.INVISIBLE);
+        binding.btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btn2.setVisibility(View.INVISIBLE);
-                progressBar.setVisibility(View.VISIBLE);
-                progressBar.postDelayed(new Runnable() {
+                binding.btn2.setVisibility(View.INVISIBLE);
+                binding.progressBar.setVisibility(View.VISIBLE);
+                binding.progressBar.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         Intent intent = new Intent(WelcomePage.this, EnterMoblieNumber.class);
                         startActivity(intent);
                         finish();
-                        progressBar.setVisibility(View.INVISIBLE);
+                        binding.progressBar.setVisibility(View.INVISIBLE);
                     }
                 }, 500);
             }

@@ -15,53 +15,41 @@ import android.widget.Toast;
 
 import com.example.passwordmanager.MainActivity2;
 import com.example.passwordmanager.R;
+import com.example.passwordmanager.databinding.Activity4VerifyOtpNumberBinding;
 
 public class VerifyOtpNumber extends AppCompatActivity {
-    EditText inputNumber1, inputNumber2, inputNumber3, inputNumber4, inputNumber5, inputNumber6;
-    TextView textView_number;
-    TextView textView_resend_otp;
-    Button btn_verify_otp;
-    ProgressBar progressBar3;
+    private Activity4VerifyOtpNumberBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity4_verify_otp_number);
 
-        inputNumber1 = findViewById(R.id.inputNumber1);
-        inputNumber2 = findViewById(R.id.inputNumber2);
-        inputNumber3 = findViewById(R.id.inputNumber3);
-        inputNumber4 = findViewById(R.id.inputNumber4);
-        inputNumber5 = findViewById(R.id.inputNumber5);
-        inputNumber6 = findViewById(R.id.inputNumber6);
+        binding = Activity4VerifyOtpNumberBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        textView_number = findViewById(R.id.textView_number);
-        textView_resend_otp = findViewById(R.id.textView_resend_otp);
-        btn_verify_otp = findViewById(R.id.btn_verify_otp);
-        progressBar3 = findViewById(R.id.progressBar3);
-        progressBar3.setVisibility(View.INVISIBLE);
+        Intent intent = getIntent();
+        String mobile_number = intent.getStringExtra("code" + "-" + "number");
+        binding.textViewNumber.setText(mobile_number);
 
-        textView_number.setText(String.format(
-                "%s", getIntent().getStringExtra("code")
-        ));
-
-        textView_resend_otp.setOnClickListener(new View.OnClickListener() {
+        binding.textViewResendOtp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(VerifyOtpNumber.this, "Sending New OTP", Toast.LENGTH_SHORT).show();
             }
         });
 
-        btn_verify_otp.setOnClickListener(new View.OnClickListener() {
+        binding.progressBar3.setVisibility(View.INVISIBLE);
+
+        binding.btnVerifyOtp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (!inputNumber1.getText().toString().trim().isEmpty() && !inputNumber2.getText().toString().trim().isEmpty() && !inputNumber3.getText().toString().trim().isEmpty() && !inputNumber4.getText().toString().trim().isEmpty() && !inputNumber5.getText().toString().trim().isEmpty() && !inputNumber6.getText().toString().trim().isEmpty()) {
+                if (!binding.inputNumber1.getText().toString().trim().isEmpty() && !binding.inputNumber2.getText().toString().trim().isEmpty() && !binding.inputNumber3.getText().toString().trim().isEmpty() && !binding.inputNumber4.getText().toString().trim().isEmpty() && !binding.inputNumber5.getText().toString().trim().isEmpty() && !binding.inputNumber6.getText().toString().trim().isEmpty()) {
 
-                    btn_verify_otp.setVisibility(View.INVISIBLE);
-                    progressBar3.setVisibility(View.VISIBLE);
+                    binding.btnVerifyOtp.setVisibility(View.INVISIBLE);
+                    binding.progressBar3.setVisibility(View.VISIBLE);
 
-                    progressBar3.postDelayed(new Runnable() {
+                    binding.progressBar3.postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
@@ -83,7 +71,7 @@ public class VerifyOtpNumber extends AppCompatActivity {
     }
 
     private void numberOtpMove() {
-        inputNumber1.addTextChangedListener(new TextWatcher() {
+        binding.inputNumber1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -92,10 +80,10 @@ public class VerifyOtpNumber extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if(!charSequence.toString().trim().isEmpty()){
-                    inputNumber2.requestFocus();
+                    binding.inputNumber2.requestFocus();
                 }
                 else {
-                    inputNumber1.requestFocus();
+                    binding.inputNumber1.requestFocus();
                 }
             }
 
@@ -105,7 +93,7 @@ public class VerifyOtpNumber extends AppCompatActivity {
             }
         });
 
-        inputNumber2.addTextChangedListener(new TextWatcher() {
+        binding.inputNumber2.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -114,10 +102,10 @@ public class VerifyOtpNumber extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if(!charSequence.toString().trim().isEmpty()){
-                    inputNumber3.requestFocus();
+                    binding.inputNumber3.requestFocus();
                 }
                 else {
-                    inputNumber1.requestFocus();
+                    binding.inputNumber1.requestFocus();
                 }
             }
 
@@ -127,7 +115,7 @@ public class VerifyOtpNumber extends AppCompatActivity {
             }
         });
 
-        inputNumber3.addTextChangedListener(new TextWatcher() {
+        binding.inputNumber3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -136,10 +124,10 @@ public class VerifyOtpNumber extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if(!charSequence.toString().trim().isEmpty()){
-                    inputNumber4.requestFocus();
+                    binding.inputNumber4.requestFocus();
                 }
                 else {
-                    inputNumber2.requestFocus();
+                    binding.inputNumber2.requestFocus();
                 }
             }
 
@@ -149,7 +137,7 @@ public class VerifyOtpNumber extends AppCompatActivity {
             }
         });
 
-        inputNumber4.addTextChangedListener(new TextWatcher() {
+        binding.inputNumber4.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -158,10 +146,10 @@ public class VerifyOtpNumber extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if(!charSequence.toString().trim().isEmpty()){
-                    inputNumber5.requestFocus();
+                    binding.inputNumber5.requestFocus();
                 }
                 else {
-                    inputNumber3.requestFocus();
+                    binding.inputNumber3.requestFocus();
                 }
             }
 
@@ -171,7 +159,7 @@ public class VerifyOtpNumber extends AppCompatActivity {
             }
         });
 
-        inputNumber5.addTextChangedListener(new TextWatcher() {
+        binding.inputNumber5.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -180,10 +168,10 @@ public class VerifyOtpNumber extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if(!charSequence.toString().trim().isEmpty()){
-                    inputNumber6.requestFocus();
+                    binding.inputNumber6.requestFocus();
                 }
                 else {
-                    inputNumber4.requestFocus();
+                    binding.inputNumber4.requestFocus();
                 }
             }
 
@@ -193,7 +181,7 @@ public class VerifyOtpNumber extends AppCompatActivity {
             }
         });
 
-        inputNumber6.addTextChangedListener(new TextWatcher() {
+        binding.inputNumber6.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -202,10 +190,10 @@ public class VerifyOtpNumber extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if(!charSequence.toString().trim().isEmpty()){
-                    inputNumber6.requestFocus();
+                    binding.inputNumber6.requestFocus();
                 }
                 else {
-                    inputNumber5.requestFocus();
+                    binding.inputNumber5.requestFocus();
                 }
             }
 

@@ -9,12 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.passwordmanager.R;
+import com.example.passwordmanager.databinding.Activity2WelcomepageBinding;
 
 public class WelcomeFirst extends Fragment {
-
-    public WelcomeFirst() {
-        // Required empty public constructor
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

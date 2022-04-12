@@ -14,51 +14,47 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.passwordmanager.R;
+import com.example.passwordmanager.databinding.Activity3EnterMoblieNumberBinding;
 
 public class EnterMoblieNumber extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
-    Button btn_get_otp;
-    EditText enterNumber;
-    ProgressBar progressBar2;
-    Spinner spinner;
+    private Activity3EnterMoblieNumberBinding binding;
     String country_code;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity3_enter_moblie_number);
 
-        btn_get_otp = findViewById(R.id.btn_verify_otp);
-        enterNumber = findViewById(R.id.enterNumber);
-        progressBar2 = findViewById(R.id.progressBar2);
-        progressBar2.setVisibility(View.INVISIBLE);
-        spinner = findViewById(R.id.spinner);
+        binding = Activity3EnterMoblieNumberBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.country_codes, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
+        binding.spinner.setAdapter(adapter);
+        binding.spinner.setOnItemSelectedListener(this);
 
+        binding.progressBar2.setVisibility(View.INVISIBLE);
 
-        btn_get_otp.setOnClickListener(new View.OnClickListener() {
+        binding.btnGetOtp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!enterNumber.getText().toString().trim().isEmpty()){
-                    if (enterNumber.length() < 10){
-                        enterNumber.setError("invalid number");
+                if(!binding.enterNumber.getText().toString().trim().isEmpty()){
+                    if (binding.enterNumber.length() < 10){
+                        binding.enterNumber.setError("invalid number");
                     }
                     else {
-                        btn_get_otp.setVisibility(View.INVISIBLE);
-                        progressBar2.setVisibility(View.VISIBLE);
+                        binding.btnGetOtp.setVisibility(View.INVISIBLE);
+                        binding.progressBar2.setVisibility(View.VISIBLE);
 
-                        progressBar2.postDelayed(new Runnable() {
+                        binding.progressBar2.postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 Intent intent = new Intent(EnterMoblieNumber.this, VerifyOtpNumber.class);
-                                intent.putExtra("code", country_code + "-" + enterNumber.getText().toString());
+                                intent.putExtra("code", country_code);
+                                intent.putExtra("number", binding.enterNumber.getText().toString());
                                 startActivity(intent);
 
-                                btn_get_otp.setVisibility(View.VISIBLE);
-                                progressBar2.setVisibility(View.INVISIBLE);
+                                binding.btnGetOtp.setVisibility(View.VISIBLE);
+                                binding.progressBar2.setVisibility(View.INVISIBLE);
 
                                 Toast.makeText(EnterMoblieNumber.this, "OTP Sended Successfully", Toast.LENGTH_SHORT).show();
                             }
