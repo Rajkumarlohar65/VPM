@@ -28,8 +28,9 @@ public class VerifyOtpNumber extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         Intent intent = getIntent();
-        String mobile_number = intent.getStringExtra("code" + "-" + "number");
-        binding.textViewNumber.setText(mobile_number);
+        String country_code = intent.getStringExtra("code");
+        String mobile_number = intent.getStringExtra("number");
+        binding.textViewNumber.setText(country_code + "-" + mobile_number);
 
         binding.textViewResendOtp.setOnClickListener(new View.OnClickListener() {
             @Override

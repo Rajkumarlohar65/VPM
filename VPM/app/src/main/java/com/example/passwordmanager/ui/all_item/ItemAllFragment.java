@@ -3,6 +3,8 @@ package com.example.passwordmanager.ui.all_item;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,8 +23,13 @@ public class ItemAllFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        ItemAllViewModel itemAllViewModel = new ViewModelProvider(this).get(ItemAllViewModel.class);
+
         binding = FragmentItemAllBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        final TextView textView = binding.textAllIem;
+        itemAllViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
         return root;
     }
